@@ -3,7 +3,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/TERMUX-IMPLEMENTED-FF0029?style=for-the-badge&logo=termux&labelColor=2C2F33" />
   <img src="https://img.shields.io/badge/PYDROID 3-SUPPORTED-0078D7?style=for-the-badge&logo=python&labelColor=2C2F33" />
-  <img src="https://img.shields.io/badge/DISCORD-JOIN-5865F2?style=for-the-badge&logo=discord&labelColor=2C2F33" />
+  <a href="https://discord.com/invite/hwfWm2d" ><img src="https://img.shields.io/badge/SFS DISCORD-JOIN-5865F2?style=for-the-badge&logo=discord&labelColor=2C2F33" /></a>
 </p>
 
 > **Disclaimer:** Kinetix is a standalone, community-driven script I made out of pure boredom. It is not affiliated with, endorsed by, or connected to Stef Morojna or Spaceflight Simulator. 
@@ -13,7 +13,7 @@ Kinetix is an open-source, automated texture manager for SFS. Honestly, doing ma
 ## 🔗 Previews
 
 <p align="center">
-  <img src="first.jpg" width="48%" />
+  <img src="first.jpg" width="88%" />
   <img src="second.jpg" width="48%" />
 </p>
 
