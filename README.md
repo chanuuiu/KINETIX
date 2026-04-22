@@ -14,7 +14,7 @@ Kinetix is an open-source, automated texture manager for SFS. Honestly, doing ma
 
 <p align="center">
   <img src="first.jpg" width="88%" />
-  <img src="second.jpg" width="48%" />
+  <img src="second.jpg" width="68%" />
 </p>
 
 ## 🛠️ Installation
