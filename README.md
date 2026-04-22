@@ -10,12 +10,10 @@
 
 Kinetix is an open-source, automated texture manager for SFS. Honestly, doing manual `.txt` configuration for modding is a massive headache, so I wrote this terminal tool to just scan your images and instantly generate the config files for you. It's built with a clean script that works flawlessly on both Termux and Pydroid 3 without you having to mess with the code.
 
-## 🖼️ PREVIEW
+## 🖼️ PREVIEW ON TERMUX
 
 <p align="center">
-## FIRST
   <img src="first.jpg" width="88%" />
-## SECOND
   <img src="second.jpg" width="88%" />
 </p>
 
