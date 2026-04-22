@@ -1,20 +1,28 @@
 # 🔗 Kinetix
 
 <p align="left">
-  <img src="https://img.shields.io/badge/PYPI-V0.4.0-38;2;255;0;41?style=for-the-badge&logo=pypi&logoColor=white&color=255029" />
-  <img src="https://img.shields.io/badge/TERMUX-IMPLEMENTED-black?style=for-the-badge&logo=termux&logoColor=white&color=255029" />
-  <img src="https://img.shields.io/badge/PYDROID-SUPPORTED-blue?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/DISCORD-JOIN-7289DA?style=for-the-badge&logo=discord&logoColor=white" />
+  <img src="https://img.shields.io/badge/TERMUX-IMPLEMENTED-FF0029?style=for-the-badge&logo=termux&labelColor=2C2F33" />
+  <img src="https://img.shields.io/badge/PYDROID 3-SUPPORTED-0078D7?style=for-the-badge&logo=python&labelColor=2C2F33" />
+  <img src="https://img.shields.io/badge/DISCORD-JOIN-5865F2?style=for-the-badge&logo=discord&labelColor=2C2F33" />
 </p>
 
-> **Disclaimer:** Kinetix is an independent, community-driven automation utility for Spaceflight Simulator. I created this script because manual .txt editing was a headache and I was bored. It is not affiliated with or endorsed by Stef Morojna.
+> **Disclaimer:** Kinetix is a standalone, community-driven script I made out of pure boredom. It is not affiliated with, endorsed by, or connected to Stef Morojna or Spaceflight Simulator. 
 
-**Kinetix** is an open-source, theoretical implementation of a high-speed texture configuration manager. It utilizes a three-stage pipeline: **Path Discovery**, **Asset Scanning**, and **JSON Generation**. The tool is designed to eliminate the friction of manual configuration while maintaining a sharp, aggressive terminal aesthetic inspired by the Verox ecosystem.
+Kinetix is an open-source, automated texture manager for SFS. Honestly, doing manual `.txt` configuration for modding is a massive headache, so I wrote this terminal tool to just scan your images and instantly generate the config files for you. It's built with a clean, Verox-inspired CLI that works flawlessly on both Termux and Pydroid 3 without you having to mess with the code.
+
+## 🔗 Previews
+
+<p align="center">
+  <img src="first.jpg" width="48%" />
+  <img src="second.jpg" width="48%" />
+</p>
 
 ## 🔗 Installation
 
 ```bash
-# Termux Environment
-git clone [https://github.com/chanuuiu/KINETIX](https://github.com/chanuuiu/KINETIX)
-cd KINETIX
-python kinetix.py
+# Clone the repository
+git clone [https://github.com/chanuuiu/kinetix-sfs-manager](https://github.com/chanuuiu/kinetix-sfs-manager)
+cd kinetix-sfs-manager
+
+# Run in Termux (it auto-installs what it needs)
+python sfs.py
