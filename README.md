@@ -21,8 +21,8 @@ Kinetix is an open-source, automated texture manager for SFS. Honestly, doing ma
 
 ```bash
 # Clone the repository
-git clone [https://github.com/chanuuiu/kinetix-sfs-manager](https://github.com/chanuuiu/kinetix-sfs-manager)
-cd kinetix-sfs-manager
+git clone [https://github.com/chanuuiu/KINETIX](https://github.com/chanuuiu/KINETIX)
+cd KINETIX
 
 # Run in Termux (it auto-installs what it needs)
-python sfs.py
+python kinetix.py
