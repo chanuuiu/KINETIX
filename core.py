@@ -143,7 +143,7 @@ def draw_ui():
 
     # Banner
     print(f"{RED}┌" + "─"*(w-2) + f"┐{RESET}")
-    print(f"  {GREEN}SFS Automated Texture Manager{RESET}")
+    print(f"  {WHITE}SFS Automated Texture Manager{RESET}")
     print("")
     try:
         logo = subprocess.check_output(["figlet", "-c", "-w", str(w), "-f", FONT_FILE, "KINETIX"]).decode()
