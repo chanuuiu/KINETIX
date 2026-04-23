@@ -132,7 +132,7 @@ def draw_ui():
     print(f"{RED}└" + "─"*(w-2) + f"┘{RESET}")
 
     # Patch Notes from JSON
-    ver, logs = "?.?.?", ["Entry missing."]
+    ver, logs = "?.?.?", ["Dictionary is missing."]
     try:
         with open(VERSION_FILE, 'r') as f:
             data = json.load(f)
@@ -140,7 +140,7 @@ def draw_ui():
             logs = data.get("updates", logs)
     except: pass
 
-    status_word = "Connected to network" if check_internet() else "Offline (Local mode)"
+    status_word = "Connected to internet" if check_internet() else "Offline (Local mode)"
 
     # Executive Status Routing
     print(f"\n  {GREEN}●{RESET} {WHITE}{status_word}{RESET}")
