@@ -88,19 +88,41 @@ def setup_dependencies():
             subprocess.run(["curl", "-s", "-o", FONT_FILE, "https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         os.system('clear')
 
-# Function to self-update
+# =========================================
+# SYSTEM CORE: REFACTORED UPDATE MODULE v1.4.4
+# =========================================
 def update_kinetix():
     if not check_internet():
         sys_log("Network interface unreachable. Update aborted.", level="error")
         return
-    
+
     sys_log("Pulling latest repository commits...")
+    
     try:
-        subprocess.run(["git", "pull", "origin", "main"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-        sys_log("Update applied. Rebooting sequence initiated.")
-        os.execv(sys.executable, ['python'] + sys.argv)
-    except:
-        sys_log("Git execution failed. Verify repository origin.", level="error")
+        subprocess.run(["git", "config", "--global", "safe.directory", "*"], capture_output=True)
+        
+        env = os.environ.copy()
+        env["GIT_DISCOVERY_ACROSS_FILESYSTEM"] = "1"
+
+        subprocess.run(
+            ["git", "pull", "origin", "main"], 
+            cwd=SCRIPT_DIR,
+            env=env,
+            capture_output=True, 
+            text=True, 
+            check=True
+        )
+        
+        sys_log("Update applied. Please run ./core.py or python core.py.")
+        time.sleep(0.5)
+
+        script_path = os.path.abspath(sys.argv[0])
+        os.execv(sys.executable, ['cd', '~', './core.py'] + sys.argv[1:])
+        
+    except subprocess.CalledProcessError as e:
+        sys_log(f"Git execution failed: {e.stderr.strip()}", level="error")
+    except Exception as e:
+        sys_log(f"System error: {str(e)}", level="error")
 
 # Function to verify core files (Self-Healing)
 def verify_integrity():
@@ -111,7 +133,6 @@ def verify_integrity():
             subprocess.run(["git", "checkout", "version.json"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except: pass
         update_kinetix()
-
 # =========================================
 # UI SYSTEM
 # =========================================
