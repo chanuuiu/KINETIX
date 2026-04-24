@@ -378,7 +378,7 @@ def manage_config(pack_path, mode):
             }
             with open(os.path.join(config_dir, f"{name}.txt"), 'w') as f:
                 json.dump(data, f, indent=2)
-            time.sleep(0.2)
+            time.sleep(0.05)
             print(f"  {GREEN}●{RESET} {name}.txt {GREEN}»{RESET} Payload generated")
 
         print("")
