@@ -15,7 +15,7 @@ import textwrap
 from datetime import datetime
 
 # Colors (Hex #ff0029 and Light Green)
-RED = '\033[37;2;255;0;41m'
+RED = '\033[38;2;255;0;41m'
 WHITE = '\033[38;5;255m'
 BOLD = '\033[1m'
 RESET = '\033[0m'
