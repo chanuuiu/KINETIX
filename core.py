@@ -105,13 +105,22 @@ def update_kinetix():
         env["GIT_DISCOVERY_ACROSS_FILESYSTEM"] = "1"
 
         subprocess.run(
-            ["git", "pull", "origin", "main"], 
-            cwd=SCRIPT_DIR,
-            env=env,
-            capture_output=True, 
-            text=True, 
-            check=True
-        )
+    ["git", "fetch", "origin", "main"],
+    cwd=SCRIPT_DIR,
+    env=env,
+    capture_output=True,
+    text=True,
+    check=True
+)
+
+subprocess.run(
+    ["git", "reset", "--hard", "origin/main"],
+    cwd=SCRIPT_DIR,
+    env=env,
+    capture_output=True,
+    text=True,
+    check=True
+)
         
         sys_log("Update applied. Please run ./core.py or python core.py.")
         time.sleep(0.5)
