@@ -113,7 +113,7 @@ def update_kinetix():
     check=True
 )
 
-subprocess.run(
+        subprocess.run(
     ["git", "reset", "--hard", "origin/main"],
     cwd=SCRIPT_DIR,
     env=env,
